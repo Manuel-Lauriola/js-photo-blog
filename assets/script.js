@@ -14,7 +14,7 @@ function createCard(destination) {
       const card = cards[i]
       //inserisco i dati dell'oggetto
       destination.innerHTML += `
-      <div class="col-4 mt-5">
+      <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
         <div class="card position-relative p-3">
           <img class="position-absolute" src="./assets/img/pin.svg" alt="#">
           <img src="${card.url}" class="card-img-top" alt="${card.title}">
