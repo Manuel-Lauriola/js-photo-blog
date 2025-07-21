@@ -1,11 +1,19 @@
-H1 {
-  font-family: "Edu TAS Beginner", cursive;
+h1 {
+  font-family: "Edu TAS Beginner", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
-.fs-48 {
-  font-size: 48px;
+.font {
+  font-family: "Edu TAS Beginner", sans-serif;
+}
+
+/* .date {
+  font-family: "Sometype Mono", monospace;
+} */
+
+.fs-4rem {
+  font-size: 4rem;
 }
 
 .fw-700 {
@@ -21,4 +29,12 @@ H1 {
   top: 5px;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+header {
+  background-image: url(./img/wall.png);
+}
+
+body {
+  background-image: url(./img/cork.png);
 }
