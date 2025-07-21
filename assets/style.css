@@ -11,3 +11,14 @@ H1 {
 .fw-700 {
   font-weight: 700;
 }
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
