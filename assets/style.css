@@ -1,0 +1,13 @@
+H1 {
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.fs-48 {
+  font-size: 48px;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
