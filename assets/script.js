@@ -31,7 +31,7 @@ function createCard(destination) {
       const col = document.createElement(`div`)
       col.classList.add(`col-lg-4`, `col-md-6`, `col-sm-12`, `mt-5`)
       const card = document.createElement(`div`)
-      card.classList.add(`card`, `position-relative`, `p-3`)
+      card.classList.add(`card`, `position-relative`, `p-3`, `pointer`)
       const pin = document.createElement(`img`)
       pin.classList.add(`position-absolute`)
       pin.src = `./assets/img/pin.svg`
@@ -42,11 +42,12 @@ function createCard(destination) {
       const cardBody = document.createElement(`div`)
       cardBody.classList.add(`card-body`)
       const title = document.createElement(`h4`)
-      title.classList.add(`card-text`, `font`)
+      title.classList.add(`card-text`, `font`, `uppercase`)
       title.innerText = object.title
       const paragraph = document.createElement(`p`)
       paragraph.classList.add(`card-text`, `date`)
       paragraph.innerText = object.date
+      //costruisco la card
       col.appendChild(card)
       card.appendChild(pin)
       card.appendChild(photo)
@@ -54,11 +55,13 @@ function createCard(destination) {
       cardBody.appendChild(title)
       cardBody.appendChild(paragraph)
       destination.appendChild(col)
+      //richiamo l'overlay
       card.addEventListener(`click`,function() {
         overlay.classList.remove(`d-none`)
         imageOverlay.src = object.url
         imageOverlay.alt = object.title
-      });
+      })
+      //effetti hover
       card.addEventListener(`mouseover`, function(){
         card.classList.remove(`rotate-back`)
         card.classList.add(`rotate`)

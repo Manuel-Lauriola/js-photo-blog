@@ -39,6 +39,10 @@ body {
   background-image: url(./img/cork.png);
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* OVERLAY */
 #overlay {
   width: 100vw;
@@ -50,18 +54,18 @@ body {
   left: 0;
 }
 
-/* .card:hover {
-  height: 110%;
-  width: 110%;
-  transition: ;
-} */
-
+/* HOVER */
 .rotate {
-  transform: rotate(10deg);
+  transform: rotate(10deg) scale(1.1);
   transition: 1s;
+  z-index: 1;
 }
 
 .rotate-back {
   transform: rotate(0deg);
   transition: 1s;
+}
+
+.pointer {
+  cursor: pointer;
 }
