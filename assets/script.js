@@ -1,5 +1,8 @@
-//prendo le variabili (album)
+//prendo le variabili (album, overlay, imageOverlay, btn)
 const album = document.getElementById(`album`)
+const overlay = document.getElementById(`overlay`)
+const imageOverlay = document.getElementById(`image-overlay`)
+const btn = document.querySelector(".btn")
 
 //definisco la funzione che mi metterà le card nell'album
 function createCard(destination) {
@@ -51,9 +54,19 @@ function createCard(destination) {
       cardBody.appendChild(title)
       cardBody.appendChild(paragraph)
       destination.appendChild(col)
+      card.addEventListener(`click`,function() {
+        overlay.classList.remove(`d-none`)
+        imageOverlay.src = object.url
+        imageOverlay.alt = object.title
+      })
     })
   }
 }
+
+//aggiungo la funzione al bottone nell'overlay
+btn.addEventListener(`click`, function() {
+  overlay.classList.add(`d-none`)
+})
 
 //invoco la funzione 
 createCard(album)
