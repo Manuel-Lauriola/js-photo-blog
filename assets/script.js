@@ -58,15 +58,25 @@ function createCard(destination) {
         overlay.classList.remove(`d-none`)
         imageOverlay.src = object.url
         imageOverlay.alt = object.title
+      });
+      card.addEventListener(`mouseover`, function(){
+        card.classList.remove(`rotate-back`)
+        card.classList.add(`rotate`)
+        pin.classList.add(`d-none`)
       })
-    })
-  }
+      card.addEventListener(`mouseleave`, function(){
+        card.classList.remove(`rotate`)
+        card.classList.add(`rotate-back`)
+        pin.classList.remove(`d-none`)
+      })
+  })
 }
 
 //aggiungo la funzione al bottone nell'overlay
 btn.addEventListener(`click`, function() {
   overlay.classList.add(`d-none`)
 })
+}
 
 //invoco la funzione 
 createCard(album)
